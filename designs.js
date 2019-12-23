@@ -12,18 +12,18 @@ function makeGrid(n,m) {
     $('tr').remove();
 
 // Your code goes here!
-    for (var h= 1; i<=n; h++){
+    for (var h= 1; h<=n; h++){
       $('#pixelCanvas').append('<tr id= table'+ h + '></tr>');
       for (var w= 1; w <= m; w++){
         $('#table'+ h).append('<td></td');
       }
     }
-      $('td').clicked(function pickedColor() {
+      $('td').click(function pickedColor() {
         color = $('#colorPicker').val();
-        if ($(click).attribute('style')){
-          $(click).removeAttribute('style')
+        if ($(this).attr('style')){
+          $(this).removeAttribute('style')
         }else{
-          $(click).attribute('style', 'background-color:'+ color);
+          $(this).attr('style', 'background-color:'+ color);
         }
 
       })
