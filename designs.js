@@ -1,17 +1,16 @@
-// Select color input
-// Select size input
+
 var height,width,color;
-// When size is submitted by the user, call makeGrid()
+
 $('#sizePicker').submit(function(event){
   event.preventDefault();
-  height =$('#inputHeight').val();
-  width =$('#inputWidth').val();
+  height =$('#inputHeight').val(); //num of squares representing height of grid
+  width =$('#inputWidth').val(); // num of squares representing width of grid
   makeGrid(height, width);
 })
 function makeGrid(n,m) {
     $('tr').remove();
 
-// Your code goes here!
+// h= height w= width
     for (var h= 1; h<=n; h++){
       $('#pixelCanvas').append('<tr id= table'+ h + '></tr>');
       for (var w= 1; w <= m; w++){
